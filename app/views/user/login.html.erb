@@ -1,0 +1,9 @@
+<h2>Login </h2>
+  <% form_for :user, :url=>{:controller=>'user', :action=>'admin_login'}, :html=>{:onSubmit=>"return large()"} do |f| %>
+  <p><b>Name :</b> <br>
+  <%= f.text_field 'name' %> 
+  </p>
+  <p><b>Password :</b><br> 
+  <%= f.password_field 'password' %></p>
+  <%= f.submit 'Sign In', :id=> 'item_submit' %>
+<% end %>
